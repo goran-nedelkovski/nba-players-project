@@ -1,0 +1,18 @@
+<!-- <p>nba-players works!</p> -->
+<div class="navbar">
+  <img src="https://pngimg.com/uploads/nba/nba_PNG2.png" alt="imageLogo" class="logo">
+  <div *ngIf="username" class="username">
+    <p>{{username}}</p>
+  </div>
+</div>
+<div *ngIf="isLoading" style="text-align: center;">
+  <app-loading-spinner></app-loading-spinner>
+</div>
+<ul *ngIf="players">
+    <li *ngFor="let player of players">
+     <p>{{player.first_name}}-{{player.last_name}}</p>
+    </li>
+  </ul>
+  <app-table></app-table>
+
+  

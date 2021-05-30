@@ -1,0 +1,29 @@
+<!-- <p>home works!</p> -->
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+        <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+            <div class="row">
+                <div class="col-sm-5 form-group">
+                    <label for="username">Username:</label>
+                    <input 
+                     type="text"
+                     id="username" 
+                     name="username"
+                     class="form-control"
+                     ngModel
+                     required
+                     minlength="3">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <!-- <a class="btn" routerLink="/nba-players">Nba players</a> -->
+                    <!--1.create (click)=onAddItem() lestener.here I could pass local ref variables as parameters, but I will go with @VieChild approuch here-->
+                    <button class="btn btn-success" type="submit" [disabled]="!f.valid">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+  </div>
+</div>
