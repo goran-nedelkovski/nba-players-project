@@ -1,6 +1,6 @@
 //import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Params } from '@angular/router';
+import { ActivatedRoute, Params, Router } from '@angular/router';
 import { NbaPlayersService, RootObject, Datum } from './nba-players.service';
 //import { Subscription } from 'rxjs';
 //import { NbaPlayersService } from './nba-players.service';
@@ -17,6 +17,7 @@ export class NbaPlayersComponent implements OnInit {
   isLoading = false;
 //inject the NbaPlayersService in the constructor()
   constructor(private nbaService:NbaPlayersService,
+    private router:Router,
     private route:ActivatedRoute) { }
 
   ngOnInit(): void {
@@ -45,6 +46,9 @@ export class NbaPlayersComponent implements OnInit {
     // );
   }
 
+  onMyTeam() {
+      this.router.navigate(['/table-list-view']);
+  }
   // ngOnDestroy() {
   //   this.resSub.unsubscribe();
   // }
