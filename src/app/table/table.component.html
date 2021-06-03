@@ -37,7 +37,7 @@
     <ng-container matColumnDef="actions">
       <mat-header-cell  *matHeaderCellDef > Add to my team </mat-header-cell>
       <mat-cell *matCellDef="let row" >
-           <button mat-button >Add to my team</button>
+           <button mat-button (click)="onSelectedRow(row)">Add to my team</button>
       </mat-cell>
     </ng-container>
   

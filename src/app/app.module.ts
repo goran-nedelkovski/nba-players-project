@@ -14,6 +14,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { TableComponent } from './table/table.component';
 import { MatInputModule } from '@angular/material/input';
 import { TableListViewComponent } from './table-list-view/table-list-view.component';
+import { TableListViewService } from './table-list-view/table-list-view.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +32,7 @@ import { TableListViewComponent } from './table-list-view/table-list-view.compon
     MatFormFieldModule ,  //import MatFormFoeldModule from @ang/material/form-field
     MatInputModule   //import MatInputModule from @ang/material/input
   ],
-  providers: [],
+  providers: [TableListViewService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
