@@ -15,12 +15,17 @@ import { TableComponent } from './table/table.component';
 import { MatInputModule } from '@angular/material/input';
 import { TableListViewComponent } from './table-list-view/table-list-view.component';
 import { TableListViewService } from './table-list-view/table-list-view.service';
+import { UserComponent } from './user/user.component';
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,  //declared and import components in app.module 
     NbaPlayersComponent, 
-    PageNotFoundComponent, LoadingSpinnerComponent, TableComponent, TableListViewComponent],
+    PageNotFoundComponent, 
+    LoadingSpinnerComponent, 
+    TableComponent, 
+    TableListViewComponent, 
+    UserComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
